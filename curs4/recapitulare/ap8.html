@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="listatari2.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        #countries-list{
+            list-style: none;
+            padding: 0;
+        }
+        .country{
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid#ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista tari</h1>
+    <ul id="countries-list"></ul>
+
+    <script>
+
+  // Functie pentru afisarea tarilor
+  function displayCountries() {
+    var countriesList = document.getElementById("countries-list");
+
+    countriesData.forEach(function (country, index) {
+        var countryItem = document.createElement("li");
+          countryItem.className = "country";
+          let lang = '';
+          country.languages.forEach(function (value, index, array) {
+            if (index !== array.length -1) {
+                lang += value + ', ';
+            } else {
+                lang +=value;
+            }
+          })
+  // Construieste informatii descpre tara
+  var countryInfo =`
+  <h2>${index +1} -${country.name}</h2>
+  <p><strong>Capitala:</strong> ${country.name}</p>
+  <p><strong>Populatie:</strong> ${country.population}</p>
+  <p><strong>Moneda:</strong> ${country.currency}</p>
+  <p><strong>Limba:</strong> ${lang}</p>
+  <p><img src="${country.flag}" style="max-width:100px"></p>
+  `;
+  countryItem.innerHTML = countryInfo;
+  countriesList.appendChild(countryItem);
+    })
+}
+
+//Afiseaza tarile cand pagina este incarcata complet
+document.addEventListener("DOMContentLoaded", function(){
+    displayCountries();
+});
+
+
+    </script>
+</body>
+</html>

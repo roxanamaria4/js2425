@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        let myDemo = document.getElementById('demo');
+        const myArray =[
+
+        ]
+        const tari =[
+            {
+                name: 'Romania',
+                capital:'Bucuresti',
+                language:['Romana'],
+                population:567546367587,
+                currency: 'ron',
+                 flag:'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Flag_of_Romania&ved=2ahUKEwimypT_wo-TAxUE3wIHHYD_Lq4QFnoECBsQAQ&usg=AOvVaw1vB-FIKx7fjWOYfDuyais8'
+            },
+            {
+                name: 'Anglia',
+                capital:'London',
+                language:['engleza'],
+                population:567546367587,
+                currency: 'lira',
+                 flag: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Union_Jack&ved=2ahUKEwjL6Zmew4-TAxU7zwIHHQWFCP4QFnoECCAQAQ&usg=AOvVaw1oKNx5gg_KM2-jI0FYrDMU'
+            }
+        ];
+        myDemo.innerHTML =`
+        <p> Nume: ${tari[0].name} </p>
+        <p> Capital: ${tari[1].capital}</p>
+        <p> Name: ${tari[1].name}</p>
+        <p> Capital: ${tari[1].capital}</p>
+        `;
+
+        console.log(tari[0].name);
+    </script>
+</body>
+</html>
