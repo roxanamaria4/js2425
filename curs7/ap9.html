@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text =` JavaScript este un limbaj de programare diferit de limbajul Java
+         si nici nu are legatura cu insula Java`;
+        let pattern = /java(\s*)/gi;
+        let result = text.match(pattern);
+        console.log(result);
+
+
+      //  let sursa = '12, 34, 56';
+      //  let pattern = /,\s*/;
+     //   let result = sursa.split(pattern);
+     //   console.log(result);
+
+        let str = `1 este luna 
+        2 maini 
+        3 crai`;
+
+        console.log(str.match(/^[1-9]/gm)); //1,2,3
+        console.log(str.match(/^[1-9]/g)); //1
+
+    </script>
+</body>
+</html>
